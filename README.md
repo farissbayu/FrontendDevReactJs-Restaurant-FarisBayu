@@ -1,8 +1,22 @@
-# React + Vite
+# Sekawan Media Frontend Engineer Intern Technical Test
+## Faris Bayu Setyawan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Version
+- Versi React.JS: 18.3.1
+- Versi Node.JS : 20.10.0
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### How to start project
+1. Clone repository proyek ini
+2. Install dependencies menggunakan npm:
+   ```
+   npm install
+   ```
+3. Jalan proyek pada server development dengan perintah berikut:
+    ```
+    npm run dev
+    ```
+4. Buka proyek pada link yang muncul, umumnya http://localhost:5173
+ 
+note.
+- Untuk API yang digunakan tidak terdapat daftar review, sehingga untuk daftar review menggunakan data dummy.
+- API yang digunakan adalah YELP FUSION API.
