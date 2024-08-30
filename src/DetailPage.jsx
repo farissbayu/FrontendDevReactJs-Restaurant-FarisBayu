@@ -32,7 +32,6 @@ export default function DetailPage() {
           options
         );
         const reviews = getReview();
-        console.log(reviews);
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -51,6 +50,13 @@ export default function DetailPage() {
     getRestaurantDetail();
   }, []);
 
+  let categoriesString = "";
+  if (restaurantData) {
+    categoriesString = restaurantData.categories
+      .map((category) => category.title)
+      .join(", ");
+  }
+
   return (
     <div className="w-full h-screen border-t">
       {loading ? (
@@ -66,6 +72,7 @@ export default function DetailPage() {
               />
               <div className="flex flex-col ml-8 space-y-2">
                 <h2 className="text-2xl font-bold">{restaurantData.name}</h2>
+                <p>{categoriesString}</p>
                 <StarRating rating={restaurantData.rating} />
                 <p>
                   {restaurantData.price} -{" "}

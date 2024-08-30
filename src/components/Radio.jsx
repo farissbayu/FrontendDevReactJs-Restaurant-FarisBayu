@@ -1,16 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 
-export default function Radio({ onCheckedChange, label }) {
-  const [isChecked, setIsChecked] = useState(false);
-
-  function toggleRadio() {
-    setIsChecked((prevValue) => {
-      onCheckedChange(!prevValue);
-      return !prevValue;
-    });
-  }
-
+export default function Radio({ isChecked, onCheckedChange, label }) {
   return (
     <div className="flex justify-center space-x-2 border-b py-1">
       <input
@@ -18,7 +8,7 @@ export default function Radio({ onCheckedChange, label }) {
         id="openNow"
         name="open-now-filter"
         checked={isChecked}
-        onClick={toggleRadio}
+        onClick={() => onCheckedChange(!isChecked)}
         className="form-radio"
         readOnly
       />
